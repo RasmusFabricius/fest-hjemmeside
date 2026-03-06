@@ -1,172 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="da">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vores Fest</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Birka Mai & Rasmus — Bryllup</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: #f7f7f7;
-            color: #333;
-            text-align: center;
-        }
+  <!-- Gaelic/Irish style fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
 
-        header {
-            background: #4CAF50;
-            color: white;
-            padding: 40px 20px;
-        }
-
-        nav {
-            background: #333;
-            padding: 10px;
-        }
-
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        section {
-            padding: 40px 20px;
-            max-width: 800px;
-            margin: auto;
-        }
-
-        .card {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            padding: 10px;
-            border-bottom: 1px solid #eee;
-        }
-
-        form input,
-        form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        button {
-            background: #4CAF50;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background: #45a049;
-        }
-
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background: #333;
-            color: white;
-        }
-    </style>
+  <style>
+    /* Elvish / forest theme — green palette */
+    :root{
+      --bg: #f3fbf6;
+      --panel: #e9f6ed;
+      --accent: #2e6b3a;
+      --accent-2: #5aa56a;
+      --muted: #35623f;
+      --text: #12321b;
+      --gold: #cda84a;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:"Cormorant Garamond", Georgia, serif;color:var(--text);background:linear-gradient(180deg,var(--bg), #eef8f1);-webkit-font-smoothing:antialiased}
+    header.site-header{padding:2rem 1rem;text-align:center;background:
+      radial-gradient(circle at 10% 10%, rgba(46,107,58,0.08), transparent 20%),
+      linear-gradient(180deg, rgba(46,107,58,0.03), transparent 60%);border-bottom:1px solid rgba(18,50,27,0.06)}
+    .brand{font-family:"Cinzel Decorative", serif;font-size:2.4rem;color:var(--accent);letter-spacing:1px;margin:0}
+    .subtitle{margin:.25rem 0;color:var(--muted);font-size:1rem}
+    nav.main-nav{display:flex;gap:1rem;justify-content:center;padding:.5rem 1rem;margin-top:1rem}
+    nav.main-nav a{color:var(--accent-2);text-decoration:none;padding:.35rem .6rem;border-radius:6px;transition:background .15s}
+    nav.main-nav a:hover{background:rgba(90,165,106,0.08)}
+    .container{max-width:900px;margin:2rem auto;padding:0 1rem}
+    section.card{background:var(--panel);padding:1.15rem;border-radius:12px;margin-bottom:1rem;box-shadow:0 6px 18px rgba(14,38,20,0.03);border:1px solid rgba(18,50,27,0.04)}
+    h2{font-family:"Cinzel Decorative", serif;color:var(--accent);margin:0 0 .5rem 0}
+    p.lead{color:var(--muted);margin:0 0 .75rem 0}
+    /* wishlist styling */
+    #wishlist-items{list-style: none;padding:0;margin:0;display:grid;grid-template-columns:1fr;gap:.5rem}
+    #wishlist-items li{padding:.6rem .75rem;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.3), rgba(255,255,255,0.05));border:1px solid rgba(18,50,27,0.06);display:flex;align-items:center;gap:.6rem}
+    #wishlist-items li::before{content: "✦";color:var(--gold);margin-right:.5rem;font-size:1.1rem}
+    .meta{font-size:.9rem;color:var(--muted);margin-top:.5rem}
+    footer{padding:1rem;text-align:center;color:var(--muted);font-size:.95rem}
+    /* responsive */
+    @media(min-width:700px){
+      #wishlist-items{grid-template-columns:1fr 1fr}
+      .brand{font-size:3rem}
+    }
+  </style>
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="brand">Birka Mai & Rasmus</div>
+    <div class="subtitle">Vi fejrer kærlighed i skovens ånd</div>
 
-    <header>
-        <h1>Velkommen til vores fest 🎉</h1>
-        <p>Vi glæder os til at fejre dagen sammen med jer</p>
-    </header>
-
-    <nav>
-        <a href="#info">Praktisk info</a>
-        <a href="#wishlist">Ønskeliste</a>
-        <a href="#signup">Tilmelding</a>
+    <nav class="main-nav" role="navigation" aria-label="Hovednavigation">
+      <a href="#praktisk">Praktisk information</a>
+      <a href="#onskeliste">Ønskeliste</a>
+      <a href="#kontakt">Kontakt</a>
     </nav>
+  </header>
 
-    <section id="info">
-        <div class="card">
-
-            <h2>Praktisk information</h2>
-
-            <p><b>Dato:</b> 14 Juni 2026</p>
-            <p><b>Adresse:</b> Festvej 10, 8000 Aarhus</p>
-
-            <p><b>Program</b></p>
-
-            <p>16:00 Velkomst</p>
-            <p>18:00 Middag</p>
-            <p>22:00 Fest</p>
-
-            <p><b>Dresscode:</b> Sommerfest</p>
-
-        </div>
+  <main class="container" role="main">
+    <section id="praktisk" class="card" aria-labelledby="praktisk-h">
+      <h2 id="praktisk-h">Praktisk information</h2>
+      <p class="lead">Ceremoni og fest i Den Gamle Købmandsgård, 12. juni 2026. Ceremoni kl. 15:00. Parkering ved indkørslen.</p>
+      <ul>
+        <li>Adresse: Købmandsgården, Stationsvej 10</li>
+        <li>Dresscode: Festligt / Naturligt (elvish touch)</li>
+        <li>Overnatning: Se anbefalede hoteller i nærområdet</li>
+      </ul>
     </section>
 
-    <section id="wishlist">
-        <div class="card">
+    <section id="onskeliste" class="card" aria-labelledby="onske-h">
+      <h2 id="onske-h">Ønskeliste</h2>
+      <p class="lead">Listen nedenfor hentes fra `wishlist.json`. Listen vises for alle besøgende — kun ejer kan redigere `wishlist.json` i repo'et.</p>
 
-            <h2>Ønskeliste</h2>
+      <!-- Requirement 4: list container with id 'wishlist-items' -->
+      <ul id="wishlist-items" aria-live="polite">
+        <!-- JS will populate <li> elements here -->
+      </ul>
 
-            <ul>
-
-                <li>Airfryer</li>
-                <li>Vinglas</li>
-                <li>Kogebog</li>
-                <li>Weekendophold</li>
-                <li>Gavekort til restaurant</li>
-
-            </ul>
-
-            <p>Hvis en gave er reserveret må I gerne skrive til os.</p>
-
-        </div>
+      <div class="meta" id="wishlist-meta" aria-hidden="true"></div>
     </section>
 
-    <section id="signup">
-        <div class="card">
-
-            <h2>Tilmelding</h2>
-
-            <form action="https://formspree.io/f/yourcode" method="POST">
-
-                <input type="text" name="name" placeholder="Navn" required>
-
-                <input type="number" name="guests" placeholder="Antal personer">
-
-                <textarea name="message" placeholder="Allergier eller besked"></textarea>
-
-                <button type="submit">Send tilmelding</button>
-
-            </form>
-
-        </div>
+    <section id="kontakt" class="card" aria-labelledby="kontakt-h">
+      <h2 id="kontakt-h">Kontakt</h2>
+      <p class="lead">Spørgsmål? Send mail til <a href="mailto:rasmusfespam@gmail.com">rasmusfespam@gmail.com</a>.</p>
     </section>
+  </main>
 
-    <footer>
+  <footer>
+    <small>Design: Elvish · Farver: Skovgrøn · Font: Cinzel Decorative & Cormorant Garamond</small>
+  </footer>
 
-        <p>Vi glæder os til at se jer ❤️</p>
+  <script>
+    // Requirement 3 & 11: load wishlist.json using fetch(), render as <li>, and handle errors safely.
+    (function(){
+      const listEl = document.getElementById('wishlist-items')
+      const metaEl = document.getElementById('wishlist-meta')
 
-    </footer>
+      function showError(msg){
+        listEl.innerHTML = ''
+        const li = document.createElement('li')
+        li.textContent = msg
+        li.style.color = 'crimson'
+        li.style.fontStyle = 'italic'
+        listEl.appendChild(li)
+        metaEl.textContent = ''
+      }
 
+      async function loadWishlist(){
+        // show temporary loading state
+        listEl.innerHTML = ''
+        const loading = document.createElement('li')
+        loading.textContent = 'Indlæser ønskeliste…'
+        loading.style.opacity = '0.8'
+        listEl.appendChild(loading)
+        metaEl.textContent = ''
+
+        try{
+          const res = await fetch('wishlist.json', {cache: 'no-cache'})
+          if(!res.ok){
+            throw new Error('Netværksfejl: ' + res.status + ' ' + res.statusText)
+          }
+          const data = await res.json()
+          if(!data || !Array.isArray(data.wishes)){
+            throw new Error('Ugyldigt dataformat i wishlist.json')
+          }
+
+          // render list
+          listEl.innerHTML = ''
+          if(data.wishes.length === 0){
+            const li = document.createElement('li')
+            li.textContent = 'Ønskelisten er tom.'
+            li.style.opacity = '0.9'
+            listEl.appendChild(li)
+          } else {
+            data.wishes.forEach(w => {
+              const li = document.createElement('li')
+              li.textContent = w
+              listEl.appendChild(li)
+            })
+          }
+
+          metaEl.textContent = `Antal ønsker: ${data.wishes.length}`
+        } catch(err){
+          console.error('Fejl ved indlæsning af wishlist.json', err)
+          showError('Kunne ikke indlæse ønskelisten. Prøv igen eller kontakt arrangørerne.')
+        }
+      }
+
+      // init
+      loadWishlist()
+    })();
+  </script>
 </body>
-
 </html>
